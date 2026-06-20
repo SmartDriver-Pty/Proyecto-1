@@ -13,7 +13,7 @@ html{
 }
 
 body{
-    font-family: Arial, sans-serif;
+    font-family: "orbitron", sans-serif;
     background: #f4f4f4;
     overflow-x: hidden;
 }
@@ -26,6 +26,7 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
 
     background-color: #062255;
 
@@ -70,9 +71,6 @@ header{
 
 .menu a:hover{
     color: white;
-    text-shadow:
-        0 0 6px white,
-        0 0 12px #7ec8ff;
 }
 
 /* =====================================
@@ -100,7 +98,7 @@ header{
     position: absolute;
     inset: 0;
 
-    background: rgba(0,0,0,.45);
+    background: rgba(0,0,0,.10);
     z-index: 1;
 }
 
@@ -125,10 +123,6 @@ header{
     letter-spacing: 4px;
 
     text-align: center;
-
-    text-shadow:
-        0 0 10px rgba(255,255,255,.8),
-        0 0 20px rgba(255,255,255,.5);
 }
 
 /* =====================================
@@ -204,7 +198,7 @@ header{
 }
 
 .info-carro h2{
-    color: #062255;
+    color: black;
     font-family: Orbitron, sans-serif;
     font-size: 2rem;
     margin-bottom: 15px;
@@ -213,7 +207,7 @@ header{
 .info-carro p{
     max-width: 800px;
     margin: auto;
-    color: #555;
+    color: white;
     line-height: 1.8;
 }
 
@@ -326,13 +320,13 @@ header{
 }
 
 .card-dark{
-    background: #072558;
+    background: #05224e;
     color: white;
 }
 
 .card-light{
     background: white;
-    color: #1d2f7a;
+    color: #05224e;
 }
 
 .imagen-recursos{
@@ -351,7 +345,7 @@ header{
 ===================================== */
 
 .contacto{
-    background: #062255;
+    background: #05224e;
     color: white;
     padding: 80px 5%;
 }
@@ -518,4 +512,19 @@ header{
     .flecha.derecha{
         right: 10px;
     }
+}
+
+/* boton de cambio de idioma*/
+.idioma-btn{
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 15px;
+}
+
+.idioma-btn img{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    transition: 0.3s;
 }
