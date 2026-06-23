@@ -13,7 +13,7 @@ html{
 }
 
 body{
-    font-family: "orbitron", sans-serif;
+    font-family: orbitron, sans-serif;
     background: #f4f4f4;
     overflow-x: hidden;
 }
@@ -52,23 +52,25 @@ header{
 
 .logo h1{
     color: white;
-    font-family: Orbitron, sans-serif;
+    font-family:sans-serif;
     font-size: 1.4rem;
     letter-spacing: 2px;
+    
 }
-
+a{
+    font-weight: 700;
+}
 .menu{
     display: flex;
-    gap: 32px;
+    gap: 35px;
 }
 
 .menu a{
     text-decoration: none;
     color: rgba(255,255,255,.65);
-    font-family: Orbitron, sans-serif;
+    font-family: sans-serif;
     transition: .3s ease;
 }
-
 .menu a:hover{
     color: white;
 }
@@ -116,7 +118,7 @@ header{
 .overlay-video h2{
     color: white;
 
-    font-family: Orbitron, sans-serif;
+    font-family: sans-serif;
 
     font-size: 4rem;
     text-transform: uppercase;
@@ -143,7 +145,7 @@ header{
 .pruebita{
     text-align: center;
 
-    font-family: Orbitron, sans-serif;
+    font-family: sans-serif;
 
     font-size: 2.4rem;
     color: #062255;
@@ -199,7 +201,7 @@ header{
 
 .info-carro h2{
     color: black;
-    font-family: Orbitron, sans-serif;
+    font-family: sans-serif;
     font-size: 2rem;
     margin-bottom: 15px;
 }
@@ -264,7 +266,7 @@ header{
 }
 
 .recursos-header h2{
-    font-family: Orbitron, sans-serif;
+    font-family:sans-serif;
     font-size: 2.5rem;
     color: #062255;
     margin-bottom: 10px;
@@ -274,6 +276,7 @@ header{
     color: #555;
     max-width: 700px;
     margin: auto;
+    font-family: sans-serif;
 }
 
 .recursos-contenedor{
@@ -315,7 +318,7 @@ header{
 }
 
 .card-recurso h3{
-    font-family: Orbitron, sans-serif;
+    font-family: sans-serif;
     font-size: 2rem;
 }
 
@@ -357,7 +360,7 @@ header{
 }
 
 .contacto h2{
-    font-family: Orbitron, sans-serif;
+    font-family:sans-serif;
     font-size: 2.5rem;
     margin-bottom: 20px;
 }
@@ -387,6 +390,12 @@ header{
 
 .contacto-item h3{
     margin-bottom: 10px;
+}
+h3{
+    font-family: sans-serif;
+}
+p{
+    font-family: sans-serif;
 }
 
 /* =====================================
