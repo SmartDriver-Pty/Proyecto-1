@@ -7,34 +7,37 @@
     <title>Catálogo</title>
 </head>
 <body>
-
-    <script src="catalogo.js"></script>
-   
     <!-- ENCABEZADO -->
 
     <header>
         <div class="logo">
-            <img src="img/logonav.png" alt="Smart Driver">
-            <h1>SMARTDRIVER</h1>
+            <img src="img/SMART_DRIVER__3_-removebg-preview.png" alt="Smart Driver">
+            <h1 id="titulo-catalogo">SMARTDRIVER</h1>
         </div>
 
         <nav class="menu">
             <a id="navInicio" href="welcome.html" class="page-link">INICIO</a>
             <a id="navCatalogo" href="catalogo.html" class="page-link">CATÁLOGO</a>
             <a id="navRecursos" href="welcome.html" class="page-link">RECURSOS</a>
-            <a id="navContacto" href="#contacto" class="page-link">CONTACTO</a> 
+            <a id="navContacto" href="#contacto" class="page-link">CONTACTO</a>
+            <button id="idiomaBtnEs" class="idioma-btn">
+                <img src="img/ESP.png"  alt="Español">
+             </button>
+            <button id="idiomaBtnEN" class="idioma-btn">
+                 <img src="img/UK.png" alt="English">
+            </button>
           </nav>
     </header>
     
     <!-- CONTENIDO PRINCIPAL -->
     <main class="catalogo">
-        <h2 class="titulo-catalogo">Explora los Vehículos</h2>
+        <h2 id="Exploralosvehículos" class="titulo-catalogo">Explora los Vehículos</h2>
 
         <div class="categorias">
-            <a href="#">Autos Eléctricos</a>
-            <a href="#">Autos Deportivos</a>
-            <a href="#" class="seleccionado">Camionetas</a>
-            <a href="#">Transporte Publico</a>
+            <a id="autosEléctricos" href="#">Autos Eléctricos</a>
+            <a id="AutosDeportivos" href="#">Autos Deportivos</a>
+            <a id="Camionetas" href="#" class="seleccionado">Camionetas</a>
+            <a id="TransportePublico" href="#">Transporte Publico</a>
         </div>
 
         <div class="linea"></div>
@@ -44,13 +47,13 @@
                 <img src="img/landi-cruiser.webp" alt="Land Cruiser">
                 <div class="info">
                     <span class="añoo">2027</span>
-                    <h3>Land Cruiser</h3>
-                    <p>Hecha con el espíritu de la original y diseñada con el propósito del presente.</p>
+                    <h3 id="Landi-cruiser">Land Cruiser</h3>
+                    <p id="Hecha">Hecha con el espíritu de la original y diseñada con el propósito del presente.</p>
                     <span class="precio">$57,880</span>
                     <small>MSRP inicial</small>
                     <div class="botones">
-                        <a href="#" class="btn">Explorar</a>
-                        <a href="#" class="enlace">Diseñar ></a>
+                        <a id="Explorar" href="#" class="btn">Explorar</a>
+                        <a id="Diseñar" href="#" class="enlace">Diseñar ></a>
                     </div>
                 </div>
             </article>
@@ -61,12 +64,12 @@
                 <div class="info">
                     <span class="añoo">2026</span>
                     <h3>Sequoia</h3>
-                    <p>Equipada y capacitada para dominar.</p>
+                    <p id="Equipada">Equipada y capacitada para dominar.</p>
                     <span class="Precio">$65,025</span>
                     <small>MSRP inicial</small>
                     <div class="botones">
-                        <a href="#" class="btn">Explorar ></a>
-                        <a href="#" class="enlace">Diseñar ></a>
+                        <a id="Explora" href="#" class="btn">Explorar ></a>
+                        <a id="Diseñar" href="#" class="enlace">Diseñar ></a>
                     </div>
                 </div>
             </article>
@@ -79,6 +82,6 @@
         </div>
     </main>
 <div class="transition-overlay"></div>
-    <script src="anim.js"></script>
+    <script src="Catalogo.js"></script>
 </body>
 </html>
