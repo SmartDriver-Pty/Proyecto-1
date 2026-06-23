@@ -18,6 +18,8 @@ const slides = [
     descripcion: "El Jetour G700 es un SUV híbrido enchufable de gran tamaño diseñado para ofrecer lujo, tecnología y excelente desempeño."
 }
 ];
+document.getElementById("descripcion").style.fontFamily =
+    "sans-serif";
 
 let index = 0;
 
@@ -70,8 +72,6 @@ window.addEventListener("load", () => {
 });
 /*----Idioma----*/
 
-let idioma = "es";
-
 const traducciones = {
     es: {
         inicio: "INICIO",
@@ -100,11 +100,18 @@ const traducciones = {
     }
 };
 
-document.getElementById("idiomaBtn").addEventListener("click", () => {
+// Botón Español
+document.getElementById("idiomaBtnEs").addEventListener("click", () => {
+    cambiarIdioma("es");
+});
 
-    idioma = idioma === "es" ? "en" : "es";
+// Botón Inglés
+document.getElementById("idiomaBtnEN").addEventListener("click", () => {
+    cambiarIdioma("en");
+});
 
-    // textos (los tuyos)
+function cambiarIdioma(idioma) {
+
     document.getElementById("navInicio").textContent = traducciones[idioma].inicio;
     document.getElementById("navCatalogo").textContent = traducciones[idioma].catalogo;
     document.getElementById("navRecursos").textContent = traducciones[idioma].recursos;
@@ -117,9 +124,5 @@ document.getElementById("idiomaBtn").addEventListener("click", () => {
     document.getElementById("tituloContacto").textContent = traducciones[idioma].tituloContacto;
     document.getElementById("textoContacto").textContent = traducciones[idioma].textoContacto;
 
-    // CAMBIO DE BANDERA
-    document.getElementById("bandera").src =
-        idioma === "es" ? "img/es.png" : "img/UK.png";
-
     document.documentElement.lang = idioma;
-});
+}
