@@ -6,7 +6,7 @@ const slides = [
     descripcion: "Un SUV moderno, elegante y cómodo para viajes dentro y fuera de la ciudad."
 },
 {
-    carro: "img/toyota RAV4.webp",
+    carro: "img/toyota RAV4.png",
     fondo: "img/Paisajeinicio.jpg",
     modelo: "TOYOTA RAV4",
     descripcion: "El nuevo modelo está inspirado en SUV Toughness, evolucionando hacia una estética más moderna y urbana."
@@ -78,12 +78,24 @@ const traducciones = {
         catalogo: "CATÁLOGO",
         recursos: "RECURSOS",
         contacto: "CONTACTO",
+
         bienvenida: "Bienvenido a Smart Driver",
         modelos: "DESCUBRE LOS NUEVOS MODELOS",
+
         tituloRecursos: "RECURSOS SMART DRIVER",
         textoRecursos: "Explora las herramientas y servicios que harán tu experiencia más segura, eficiente y conectada.",
+
+        mapas: "Mapas",
+        ofertas: "Ofertas",
+        marketplace: "Marketplace",
+        feedback: "Feedback",
+
         tituloContacto: "CONTACTO",
-        textoContacto: "¿Tienes preguntas o deseas más información sobre nuestros vehículos y servicios?"
+        textoContacto: "¿Tienes preguntas o deseas más información sobre nuestros vehículos y servicios?",
+
+        direccion: "📍 Dirección",
+        telefono: "📞 Teléfono",
+        correo: "✉️ Correo"
     },
 
     en: {
@@ -91,38 +103,84 @@ const traducciones = {
         catalogo: "CATALOG",
         recursos: "RESOURCES",
         contacto: "CONTACT",
+
         bienvenida: "Welcome to Smart Driver",
         modelos: "DISCOVER THE NEW MODELS",
+
         tituloRecursos: "SMART DRIVER RESOURCES",
         textoRecursos: "Explore the tools and services that will make your experience safer, more efficient and connected.",
+
+        mapas: "Maps",
+        ofertas: "Deals",
+        marketplace: "Marketplace",
+        feedback: "Feedback",
+
         tituloContacto: "CONTACT",
-        textoContacto: "Do you have questions or would like more information about our vehicles and services?"
+        textoContacto: "Do you have questions or would like more information about our vehicles and services?",
+
+        direccion: "📍 Address",
+        telefono: "📞 Phone",
+        correo: "✉️ Email"
     }
 };
 
-// Botón Español
+// =====================
+// CAMBIO DE IDIOMA
+// =====================
+function cambiarIdioma(idioma) {
+
+    const t = traducciones[idioma];
+
+    // NAV
+    document.getElementById("navInicio").textContent = t.inicio;
+    document.getElementById("navCatalogo").textContent = t.catalogo;
+    document.getElementById("navRecursos").textContent = t.recursos;
+    document.getElementById("navContacto").textContent = t.contacto;
+
+    // HERO + MODELOS
+    document.getElementById("bienvenida").textContent = t.bienvenida;
+    document.getElementById("nuevosModelos").textContent = t.modelos;
+
+    // RECURSOS
+    document.getElementById("tituloRecursos").textContent = t.tituloRecursos;
+    document.getElementById("textoRecursos").textContent = t.textoRecursos;
+
+    const mapas = document.getElementById("Mapas");
+    const ofertas = document.getElementById("ofertas");
+    const marketplace = document.getElementById("marketplace");
+    const feedback = document.getElementById("feedback");
+
+    if (mapas) mapas.textContent = t.mapas;
+    if (ofertas) ofertas.textContent = t.ofertas;
+    if (marketplace) marketplace.textContent = t.marketplace;
+    if (feedback) feedback.textContent = t.feedback;
+
+    // CONTACTO
+    document.getElementById("tituloContacto").textContent = t.tituloContacto;
+    document.getElementById("textoContacto").textContent = t.textoContacto;
+
+    const direccion = document.getElementById("direccion");
+    const telefono = document.getElementById("telefono");
+    const correo = document.getElementById("correo");
+
+    if (direccion) direccion.textContent = t.direccion;
+    if (telefono) telefono.textContent = t.telefono;
+    if (correo) correo.textContent = t.correo;
+
+    // idioma HTML
+    document.documentElement.lang = idioma;
+}
+
+// =====================
+// BOTONES
+// =====================
 document.getElementById("idiomaBtnEs").addEventListener("click", () => {
     cambiarIdioma("es");
 });
 
-// Botón Inglés
 document.getElementById("idiomaBtnEN").addEventListener("click", () => {
     cambiarIdioma("en");
 });
 
-function cambiarIdioma(idioma) {
-
-    document.getElementById("navInicio").textContent = traducciones[idioma].inicio;
-    document.getElementById("navCatalogo").textContent = traducciones[idioma].catalogo;
-    document.getElementById("navRecursos").textContent = traducciones[idioma].recursos;
-    document.getElementById("navContacto").textContent = traducciones[idioma].contacto;
-
-    document.getElementById("bienvenida").textContent = traducciones[idioma].bienvenida;
-    document.getElementById("nuevosModelos").textContent = traducciones[idioma].modelos;
-    document.getElementById("tituloRecursos").textContent = traducciones[idioma].tituloRecursos;
-    document.getElementById("textoRecursos").textContent = traducciones[idioma].textoRecursos;
-    document.getElementById("tituloContacto").textContent = traducciones[idioma].tituloContacto;
-    document.getElementById("textoContacto").textContent = traducciones[idioma].textoContacto;
-
-    document.documentElement.lang = idioma;
-}
+// idioma por defecto
+cambiarIdioma("es");
