@@ -4,8 +4,6 @@ body{
     background: #f4f4f4;
     overflow-x: hidden;    overflow-x: hidden;
 }
-
-
 /* ENCABEZADO SUPERIOR */
 header{
     display: flex;
@@ -20,6 +18,7 @@ header{
     position: sticky;
     top: 0;
     z-index: 1000;
+
 }
 
 .logo{
@@ -37,14 +36,18 @@ header{
 }
 
 
-/* Tcolor: white;
+/*color del titulo*/
+h1{
+    color:  white;
     font-family: Orbitron, sans-serif;
     font-size: 1.4rem;
-    letter-spacing: 2px;n, sans-serif;
+    letter-spacing: 2px; 
     font-size: 1.4rem;
     letter-spacing: 2px;
 }
-
+a{
+    font-weight: 700;
+}
 
 /* MENÚ DE NAVEGACIÓN */
 .menu{
@@ -57,20 +60,9 @@ header{
 .menu a{
     text-decoration: none;
     color: rgba(255,255,255,.65);
-    font-family: Orbitron, sans-serif;
+    font-family:  sans-serif;
     transition: .3s ease;
 }
-
-
-/* EFECTO AL PASAR EL CURSOR POR EL MENÚ */
-.menu a:hover{
-    color: white;
-    text-shadow:
-        0 0 6px white,
-        0 0 12px #7ec8ff;
-}
-
-
 /* CONTENEDOR PRINCIPAL DEL CATÁLOGO */
 .catalogo{
     padding: 20px 40px 40px;
@@ -83,7 +75,7 @@ header{
     text-align: center;
     font-size: 44px;
     margin: 20px 0 30px;
-    font-family: Orbitron, sans-serif;
+    font-family: sans-serif;
 }
 
 
@@ -273,4 +265,18 @@ header{
     100%{
         transform: translateX(100%);
     }
+}
+/* boton de cambio de idioma*/
+.idioma-btn{
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 15px;
+}
+
+.idioma-btn img{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    transition: 0.3s;
 }
