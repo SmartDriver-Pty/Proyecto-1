@@ -1,5 +1,5 @@
 /*cambio de idioma catalogo*/
-const traducciones = {
+let traducciones = {
     es: {
         inicio: "INICIO",
         catalogo: "CATÁLOGO",
