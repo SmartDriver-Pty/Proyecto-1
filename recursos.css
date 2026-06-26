@@ -1,0 +1,422 @@
+/* =====================================
+   CONFIGURACIÓN GENERAL
+===================================== */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: sans-serif;
+    background: #f4f4f4;
+    overflow-x: hidden;
+}
+/* =====================================
+   HEADER
+===================================== */
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+
+    background-color: #062255;
+
+    padding: 0 35px;
+    height: 78px;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo img{
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.logo h1{
+    color: white;
+    font-family:sans-serif;
+    font-size: 1.4rem;
+    letter-spacing: 2px;
+    
+}
+a{
+    font-weight: 700;
+}
+.menu{
+    display: flex;
+    gap: 35px;
+}
+
+.menu a{
+    text-decoration: none;
+    color: rgba(255,255,255,.65);
+    font-family: sans-serif;
+    transition: .3s ease;
+}
+.menu a:hover{
+    color: white;
+}
+/* boton de cambio de idioma*/
+.idioma-btn{
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 15px;
+}
+
+.idioma-btn img{
+    width: 25px;
+    height: 20px;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+/* ==========================
+   ACCESOS RAPIDOS
+========================== */
+
+.accesos-rapidos{
+    padding: 50px 40px 80px;
+
+    background: linear-gradient(
+        135deg,
+        #f7f8fc,
+        #e7ebff
+    );
+
+    min-height: 100vh;
+}
+
+/* Titulo */
+
+.titulo-seccion{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 45px;
+}
+
+.icono-titulo{
+    width: 50px;
+    height: 50px;
+
+    background: #1e5dbf;
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+
+    font-size: 1.5rem;
+}
+
+.titulo-seccion h2{
+    color: #082c78;
+    font-family: sans-serif;
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+/* Grid */
+
+.grid-accesos{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    justify-items: center;
+}
+
+/* Tarjetas */
+
+.card{
+    width: 220px;
+    height: 220px;
+
+    background: white;
+
+    border-radius: 25px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,.12);
+
+    transition: .3s;
+}
+
+.card:hover{
+    transform: translateY(-8px);
+}
+
+.icono{
+    width: 80px;
+    height: 80px;
+
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+    font-size: 2.2rem;
+
+    margin-bottom: 15px;
+}
+
+.card h3{
+    font-size: 0.9rem;
+    color: #1d1d1d;
+    margin-bottom: 8px;
+    font-family: sans-serif;
+}
+
+.card p{
+    font-size: 0.7rem;
+    color: #666;
+    width: 75%;
+    font-family: sans-serif;
+}
+
+.linea{
+    width: 70px;
+    height: 4px;
+    border-radius: 20px;
+    margin-top: 15px;
+}
+
+/* Colores */
+
+.azul{
+    background: #1e5dbf;
+}
+
+.verde{
+    background: #2fa84f;
+}
+
+.naranja{
+    background: #ff7a00;
+}
+
+.morado{
+    background: #6b3fc9;
+}
+
+.amarillo{
+    background: #f4b400;
+}
+
+.rojo{
+    background: #e53935;
+}
+/*===== fondo principal =====*/
+.fondo{
+    position: relative;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+}
+
+.fondorecursos{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Texto encima de la imagen */
+.contenido{
+    position: absolute;
+    top: 50%;
+    right: 80px; /* distancia del borde derecho */
+    transform: translateY(-50%);
+    color: white;
+    text-align: right;
+    max-width: 400px;
+}
+
+.contenido h1{
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+.contenido p{
+    font-size: 1.3rem;
+}
+
+/* ==========================
+   APRENDE SOBRE VEHICULOS
+========================== */
+
+.aprende-vehiculos{
+    padding: 60px 30px;
+    background: linear-gradient(
+        135deg,
+        #f7f8fc,
+        #e7ebff
+    );
+}
+
+.contenedor-aprende{
+    display: grid;
+
+    grid-template-columns:
+        1.1fr
+        1.1fr
+        0.6fr;
+
+    gap: 18px;
+}
+
+/* TARJETAS GRANDES */
+
+.card-aprende{
+    position: relative;
+
+    height: 195px;
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    background-size: cover;
+    background-position: center;
+
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+.card-aprende:hover{
+    transform: scale(1.02);
+}
+
+.overlay{
+    position: absolute;
+    inset: 0;
+
+    background: rgba(0,0,0,.30);
+}
+
+.contenido{
+    position: absolute;
+    top: 18px;
+    left: 18px;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    color: white;
+    z-index: 2;
+}
+
+.contenido span{
+    font-size: 2rem;
+}
+
+.contenido h3{
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: -1px;
+}
+
+/* VIDEO */
+
+.card-video{
+    position: relative;
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    background-size: cover;
+    background-position: center;
+
+    min-height: 195px;
+}
+
+.play-btn{
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 80px;
+    height: 80px;
+
+    background: rgba(0,0,0,.45);
+
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+    font-size: 2rem;
+
+    backdrop-filter: blur(4px);
+}
+
+/* IMÁGENES */
+
+.mantenimiento{
+    background-image:
+    url("img/mantenimiento.jpg");
+}
+
+.compra img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.conduccion{
+    background-image:
+    url("img/conduccion.jpg");
+}
+
+.leyes{
+    background-image:
+    url("img/leyes.jpg");
+}
+
+.video1{
+    background-image:
+    url("img/video1.jpg");
+}
+
+.video2{
+    background-image:
+    url("img/video2.jpg");
+}
